@@ -1,0 +1,284 @@
+the goal is not to replicate the existing site, but to create a modern, high-converting landing page for visitors arriving from Instagram/Facebook/Google ads. The page should immediately answer three questions:
+
+Who are you?
+What services do you provide?
+Why should clients trust you?
+Suggested Landing Page Structure
+1. Hero Section
+Strong headline
+Short supporting text
+Two CTA buttons
+Background gradient with subtle pattern
+Team image or digital workspace illustration
+
+Example:
+
+Grow Your Business with Digital Marketing That Delivers Results
+
+We help businesses increase leads, sales, and online visibility through creative marketing, powerful branding, and modern technology.
+
+Buttons:
+
+Get Free Consultation
+View Our Work
+2. Trusted By / Statistics
+
+Display attractive cards.
+
+500+ Projects Completed
+
+120+ Happy Clients
+
+8+ Years Experience
+
+95% Client Retention
+3. About Team
+
+Introduce your company.
+
+Example:
+
+We are a passionate team of designers, developers, marketers, photographers, editors, and strategists working together to help brands grow digitally.
+
+Highlight:
+
+Creative Team
+Data Driven Strategy
+Fast Delivery
+Transparent Communication
+
+Include your quote:
+
+"Our team's hard work and unity are the real keys to our success."
+
+4. Services
+
+Use attractive cards.
+
+Examples:
+
+📈 Digital Marketing
+
+📱 Social Media Management
+
+🎨 Graphic Designing
+
+🌐 Website Development
+
+📷 Product Photography
+
+🎬 Video Editing
+
+📢 Paid Advertising
+
+🛍 Brand Identity
+
+📧 Email Marketing
+
+SEO Optimization
+
+Content Creation
+
+Business Consultation
+
+5. Why Choose Us
+
+Use icon cards.
+
+✔ Experienced Team
+
+✔ Creative Solutions
+
+✔ Affordable Pricing
+
+✔ Dedicated Support
+
+✔ Fast Delivery
+
+✔ ROI Focused
+
+6. Portfolio Preview
+
+Grid of projects.
+
+Example categories:
+
+Branding
+Social Media Posts
+Websites
+Advertisements
+Product Shoots
+
+Add button:
+
+View Complete Portfolio
+
+7. Work Process
+
+Four-step timeline.
+
+Consultation
+
+↓
+
+Planning
+
+↓
+
+Execution
+
+↓
+
+Growth
+8. Testimonials
+
+Three client cards.
+
+Include:
+
+Name
+Company
+Review
+Stars
+9. FAQ
+
+Accordion.
+
+Examples:
+
+How long does a project take?
+Do you provide monthly marketing?
+Do you develop websites?
+Can I hire only for social media?
+How much does it cost?
+10. Contact Section
+
+Simple lead generation form.
+
+Fields:
+
+Name
+Phone
+Email
+Business Name
+Service Required
+Message
+
+CTA
+
+Get Free Consultation
+
+11. Footer
+
+Include:
+
+Logo
+About
+Services
+Social Links
+WhatsApp
+Email
+Copyright
+Design Style
+
+Follow a modern SaaS/agency aesthetic.
+
+Colors
+Primary
+#2563EB
+
+Secondary
+#0F172A
+
+Accent
+#06B6D4
+
+Background
+#F8FAFC
+
+Text
+#334155
+
+Success
+#22C55E
+Fonts
+
+Use Google Fonts.
+
+Poppins
+
+or
+
+Inter
+Components
+Rounded-2xl cards
+Glassmorphism hero
+Soft shadows
+Gradient buttons
+Smooth hover effects
+Large whitespace
+Responsive grid
+Sticky navbar
+Animated counters
+Scroll animations (using lightweight CSS/JS only, no frameworks)
+Navigation
+Home
+
+About
+
+Services
+
+Portfolio
+
+Testimonials
+
+FAQ
+
+Contact
+CTA Placement
+
+Add CTA buttons after:
+
+Hero
+Services
+Portfolio
+Testimonials
+Footer
+SEO
+
+Include proper meta tags.
+
+Title
+
+Digital Marketing Agency | Grow Your Business
+
+Description
+
+Professional Digital Marketing, Website Development, Branding, SEO, Social Media Management, Graphic Design and Advertising Services.
+
+Keywords
+
+digital marketing
+website development
+seo
+branding
+social media marketing
+graphic design
+business growth
+Technical Requirements
+Single index.html
+Tailwind CSS via CDN only
+Vanilla HTML, CSS, and JavaScript (no React, Vue, Angular, etc.)
+Responsive across mobile, tablet, and desktop
+Smooth scrolling
+Sticky navigation
+Mobile hamburger menu
+Animated statistics on scroll
+FAQ accordion
+Contact form with client-side validation
+Lazy-loaded images
+Semantic HTML (header, main, section, footer)
+Accessible (ARIA labels, keyboard-friendly navigation)
+Optimized for fast loading
+
+This structure is well-suited for traffic coming from social media ads because it quickly establishes credibility, showcases services and results, and repeatedly encourages visitors to request a consultation or make contact.
