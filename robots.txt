@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atharvapawar456.github.io/TeamzEffortPage/sitemap.xml

@@ -1,0 +1,13 @@
+{
+  "name": "teamzeffort-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TeamzEffort digital marketing learning program landing page",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./static/css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./static/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

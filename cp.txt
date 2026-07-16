@@ -1,0 +1,54 @@
+ACT as a expert digital marking tech person 
+where only keep needed content on this landing page properly 
+
+
+this should be a proper responsive website 
+keep the content minimum
+only use relative paths :
+
+ref:
+/static
+
+
+add a button : join our whatsapp community group
+link : https://chat.whatsapp.com/Cbv34JFz9MlEE1Q2lgpJlf
+
+correct CONTACT us section
+file : index.html
+
+update : <!-- Desktop nav -->, <!-- Mobile toggle -->, <!-- Mobile menu -->
+file : index.html
+i face issue on mobile view for menu section , text got overlaped so just add a bg to menu and click outside of the menu area close it
+plan it properly and then implement it 
+
+
+do a proper scan from dev, marking landing page, client point of view and list the issue (title, one para) in file aispace/issues.md
+
+
+in contact form connect this to google sheet using this request only 
+example:
+
+curl -X POST "https://script.google.com/macros/s/AKfycbwu3Y2ywmz70sECdwPbskQkAse4qGaJ8-35CS_ox24T3qZEsgBhq4hdsSlR549VLxIRZg/exec" \
+-H "Content-Type: application/json" \
+-d '{
+  "name":"Atharva Pawar",
+  "phone":"9876543210",
+  "email":"atharva@gmail.com",
+  "city":"Mumbai",
+  "country":"India"
+}'
+
+
+
+
+
+
+Learner Stories:us ethis persons names
+person 1 : Devendra Dalvi
+person 2 : Manoj Kothavade
+person 3 : Sahil Rane
+person 4 : Suyash Shinde 
+person 5 : Vrushali Shinde 
+person 6 : Veena Kerkar 
+
+and update theirs stories properly
