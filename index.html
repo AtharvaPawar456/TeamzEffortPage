@@ -218,17 +218,37 @@
           <!-- Hero visual -->
           <div class="reveal reveal-delay-2 relative">
             <div class="glass rounded-3xl p-6 sm:p-8 shadow-soft">
-              <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/40 via-accent/30 to-secondary/60 flex items-center justify-center relative overflow-hidden">
-                <img
-                  src="static/tz-banner.png"
-                  alt="TeamzEffort digital marketing learning program"
-                  class="w-full h-full object-cover rounded-2xl"
-                  width="800"
-                  height="600"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                />
+              <div class="aspect-square w-full max-w-md mx-auto rounded-2xl bg-secondary relative overflow-hidden group">
+                <video
+                  id="hero-short-video"
+                  src="static/short-video/TZ-landing-page-short.mp4"
+                  class="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  webkit-playsinline
+                  preload="auto"
+                  aria-label="TeamzEffort digital marketing learning program short"
+                ></video>
+                <!-- Sound control: browsers block autoplay with audio; unmute on tap -->
+                <button
+                  type="button"
+                  id="hero-sound-btn"
+                  class="absolute bottom-3 right-3 z-10 inline-flex items-center gap-2 rounded-full bg-black/70 hover:bg-black/85 text-white text-sm font-medium px-3.5 py-2 shadow-lg backdrop-blur-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+                  aria-pressed="false"
+                  aria-label="Turn sound on"
+                >
+                  <svg id="hero-sound-icon-off" class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25H3.75A1.5 1.5 0 002.25 9.75v4.5a1.5 1.5 0 001.5 1.5h1.5L12 21V3L5.25 8.25z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 9l5 6m0-6l-5 6"/>
+                  </svg>
+                  <svg id="hero-sound-icon-on" class="w-5 h-5 shrink-0 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25H3.75A1.5 1.5 0 002.25 9.75v4.5a1.5 1.5 0 001.5 1.5h1.5L12 21V3L5.25 8.25z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 8.25a5.25 5.25 0 010 7.5M18.75 5.25a9 9 0 010 13.5"/>
+                  </svg>
+                  <span id="hero-sound-label">Tap for sound</span>
+                </button>
               </div>
             </div>
           </div>
@@ -792,6 +812,157 @@
       // Year
       var yearEl = document.getElementById('year');
       if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      // Hero short: autoplay + loop. Browsers block sound on autoplay, so we:
+      // 1) try unmuted autoplay, 2) fall back to muted play, 3) enable audio on first gesture / sound button.
+      var heroVideo = document.getElementById('hero-short-video');
+      var heroSoundBtn = document.getElementById('hero-sound-btn');
+      var heroSoundLabel = document.getElementById('hero-sound-label');
+      var heroIconOff = document.getElementById('hero-sound-icon-off');
+      var heroIconOn = document.getElementById('hero-sound-icon-on');
+
+      if (heroVideo) {
+        var heroPlaying = false;
+        var soundOn = false;
+        var playAttempts = 0;
+
+        heroVideo.loop = true;
+        heroVideo.playsInline = true;
+        heroVideo.volume = 1;
+        heroVideo.setAttribute('playsinline', '');
+        heroVideo.setAttribute('webkit-playsinline', '');
+
+        function updateSoundUI() {
+          var on = !heroVideo.muted && soundOn;
+          if (heroSoundBtn) {
+            heroSoundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            heroSoundBtn.setAttribute('aria-label', on ? 'Mute sound' : 'Turn sound on');
+          }
+          if (heroSoundLabel) {
+            heroSoundLabel.textContent = on ? 'Sound on' : 'Tap for sound';
+          }
+          if (heroIconOff) heroIconOff.classList.toggle('hidden', on);
+          if (heroIconOn) heroIconOn.classList.toggle('hidden', !on);
+          if (heroSoundBtn) {
+            heroSoundBtn.classList.toggle('bg-primary/90', on);
+            heroSoundBtn.classList.toggle('bg-black/70', !on);
+          }
+        }
+
+        function enableSound() {
+          heroVideo.muted = false;
+          heroVideo.defaultMuted = false;
+          heroVideo.removeAttribute('muted');
+          heroVideo.volume = 1;
+          soundOn = true;
+          var p = heroVideo.play();
+          if (p && typeof p.then === 'function') {
+            p.then(function () {
+              heroPlaying = true;
+              // If browser still forces mute, reflect that in UI
+              if (heroVideo.muted) {
+                soundOn = false;
+              }
+              updateSoundUI();
+            }).catch(function () {
+              soundOn = false;
+              updateSoundUI();
+            });
+          } else {
+            updateSoundUI();
+          }
+        }
+
+        function muteSound() {
+          heroVideo.muted = true;
+          heroVideo.defaultMuted = true;
+          heroVideo.setAttribute('muted', '');
+          soundOn = false;
+          updateSoundUI();
+        }
+
+        function playWithAudioFirst() {
+          playAttempts += 1;
+          heroVideo.muted = false;
+          heroVideo.defaultMuted = false;
+          heroVideo.removeAttribute('muted');
+          heroVideo.volume = 1;
+
+          var p = heroVideo.play();
+          if (!p || typeof p.then !== 'function') {
+            soundOn = !heroVideo.muted;
+            heroPlaying = !heroVideo.paused;
+            updateSoundUI();
+            return;
+          }
+
+          p.then(function () {
+            heroPlaying = true;
+            soundOn = !heroVideo.muted;
+            updateSoundUI();
+          }).catch(function () {
+            // Unmuted autoplay blocked — play muted so video still runs
+            heroVideo.muted = true;
+            heroVideo.defaultMuted = true;
+            heroVideo.setAttribute('muted', '');
+            soundOn = false;
+            heroVideo.play().then(function () {
+              heroPlaying = true;
+              updateSoundUI();
+            }).catch(function () {
+              // Still buffering; retries handle this
+            });
+            updateSoundUI();
+          });
+        }
+
+        function ensurePlaying() {
+          if (heroPlaying && !heroVideo.paused) return;
+          if (playAttempts > 12) return;
+          playWithAudioFirst();
+        }
+
+        // Sound button: toggle mute / unmute (user gesture → audio allowed)
+        if (heroSoundBtn) {
+          heroSoundBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (heroVideo.muted || !soundOn) {
+              enableSound();
+            } else {
+              muteSound();
+            }
+          });
+        }
+
+        // First page interaction also turns sound on (valid user gesture for browser policy)
+        var unlockOnce = function (e) {
+          if (soundOn && !heroVideo.muted) {
+            document.removeEventListener('pointerdown', unlockOnce, true);
+            document.removeEventListener('keydown', unlockOnce, true);
+            return;
+          }
+          // Let the sound button handle its own toggle (avoid unmute-then-mute race)
+          if (heroSoundBtn && e.target && heroSoundBtn.contains(e.target)) return;
+          enableSound();
+          document.removeEventListener('pointerdown', unlockOnce, true);
+          document.removeEventListener('keydown', unlockOnce, true);
+        };
+        document.addEventListener('pointerdown', unlockOnce, true);
+        document.addEventListener('keydown', unlockOnce, true);
+
+        if (heroVideo.readyState >= 2) {
+          ensurePlaying();
+        } else {
+          heroVideo.addEventListener('loadeddata', ensurePlaying, { once: true });
+          heroVideo.addEventListener('canplay', ensurePlaying, { once: true });
+        }
+        setTimeout(ensurePlaying, 400);
+        setTimeout(ensurePlaying, 1500);
+        setTimeout(ensurePlaying, 4000);
+
+        updateSoundUI();
+      }
 
       // Sticky navbar style on scroll
       var navbar = document.getElementById('navbar');

@@ -52,3 +52,10 @@ person 5 : Vrushali Shinde
 person 6 : Veena Kerkar 
 
 and update theirs stories properly
+
+
+put this video short over here : {<!-- Hero visual -->}
+where auto play with audio ON and loop infinite
+video short file : static\short-video\TZ-landing-page-short.mp4
+
+make it 1:1 ratio full video 
