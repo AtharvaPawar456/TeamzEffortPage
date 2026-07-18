@@ -17,6 +17,9 @@
   <meta property="og:description" content="A practical digital marketing learning program for individuals — SEO, social media, ads, branding, design, and websites. Join our WhatsApp community." />
   <meta property="og:site_name" content="TeamzEffort" />
   <meta property="og:image" content="https://atharvapawar456.github.io/TeamzEffortPage/static/tz-banner.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:locale:alternate" content="mr_IN" />
+  <meta property="og:locale:alternate" content="hi_IN" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -26,10 +29,10 @@
 
   <title>Learn Digital Marketing | TeamzEffort Program</title>
 
-  <!-- Fonts -->
+  <!-- Fonts: Latin + Devanagari (Marathi / Hindi) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Built Tailwind + custom styles (run: npm run build:css) -->
   <link rel="stylesheet" href="static/css/styles.css" />
@@ -112,58 +115,68 @@
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="antialiased">
-  <a href="#main" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link" data-i18n="a11y.skip_to_main">Skip to main content</a>
 
   <!-- ========== NAVBAR ========== -->
   <header>
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" aria-label="Main navigation">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" data-i18n-aria-label="a11y.nav_main" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 md:h-20">
+        <div class="flex items-center justify-between h-16 md:h-20 gap-2">
           <!-- Brand -->
-          <a href="#home" class="nav-brand flex items-center gap-2 text-white font-display font-bold text-xl tracking-tight" aria-label="TeamzEffort home">
+          <a href="#home" class="nav-brand flex items-center gap-2 text-white font-display font-bold text-xl tracking-tight shrink-0" data-i18n-aria-label="a11y.brand_home" aria-label="TeamzEffort home">
             <img src="static/tz-logo.png" alt="" width="36" height="36" class="w-9 h-9 rounded-xl object-cover shadow-glow" loading="eager" decoding="async" />
             <span>Teamz<span class="text-accent">Effort</span></span>
           </a>
 
           <!-- Desktop nav -->
           <ul class="hidden lg:flex items-center gap-1">
-            <li><a href="#home" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors">Home</a></li>
-            <li><a href="#about" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors">About</a></li>
-            <li><a href="#services" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors">Curriculum</a></li>
-            <li><a href="#process" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors">How It Works</a></li>
-            <li><a href="#testimonials" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors">Stories</a></li>
-            <li><a href="#faq" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors">FAQ</a></li>
-            <li><a href="#contact" class="nav-link ml-2 inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold text-white btn-primary">Enroll Now</a></li>
+            <li><a href="#home" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors" data-i18n="nav.about">About</a></li>
+            <li><a href="#services" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors" data-i18n="nav.curriculum">Curriculum</a></li>
+            <li><a href="#process" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors" data-i18n="nav.how_it_works">How It Works</a></li>
+            <li><a href="#testimonials" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors" data-i18n="nav.stories">Stories</a></li>
+            <li><a href="#faq" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-link ml-2 inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold text-white btn-primary" data-i18n="nav.enroll">Enroll Now</a></li>
           </ul>
 
-          <!-- Mobile toggle -->
-          <button
-            type="button"
-            id="nav-toggle"
-            class="nav-toggle lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-            aria-label="Toggle navigation menu"
-          >
-            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+          <div class="flex items-center gap-2 shrink-0">
+            <!-- Language switcher (desktop + mobile) -->
+            <div class="lang-switcher" role="group" data-i18n-aria-label="a11y.lang_switcher" aria-label="Language">
+              <button type="button" class="lang-btn" data-lang-set="en" aria-pressed="true" title="English"><span data-i18n="lang.en">EN</span></button>
+              <button type="button" class="lang-btn" data-lang-set="mr" aria-pressed="false" title="मराठी"><span data-i18n="lang.mr">मरा</span></button>
+              <button type="button" class="lang-btn" data-lang-set="hi" aria-pressed="false" title="हिन्दी"><span data-i18n="lang.hi">हिं</span></button>
+            </div>
+
+            <!-- Mobile toggle -->
+            <button
+              type="button"
+              id="nav-toggle"
+              class="nav-toggle lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              data-i18n-aria-label="a11y.toggle_menu"
+              aria-label="Toggle navigation menu"
+            >
+              <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="lg:hidden" role="navigation" aria-label="Mobile navigation">
+        <div id="mobile-menu" class="lg:hidden" role="navigation" data-i18n-aria-label="a11y.nav_mobile" aria-label="Mobile navigation">
           <ul class="flex flex-col gap-1 py-3 pb-4 border-t border-white/10">
-            <li><a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium">Home</a></li>
-            <li><a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium">About</a></li>
-            <li><a href="#services" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium">Curriculum</a></li>
-            <li><a href="#process" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium">How It Works</a></li>
-            <li><a href="#testimonials" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium">Stories</a></li>
-            <li><a href="#faq" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium">FAQ</a></li>
-            <li><a href="#contact" class="mobile-nav-link block mt-1 px-3 py-2.5 rounded-xl text-sm font-semibold text-center text-white btn-primary">Enroll Now</a></li>
+            <li><a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium" data-i18n="nav.about">About</a></li>
+            <li><a href="#services" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium" data-i18n="nav.curriculum">Curriculum</a></li>
+            <li><a href="#process" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium" data-i18n="nav.how_it_works">How It Works</a></li>
+            <li><a href="#testimonials" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium" data-i18n="nav.stories">Stories</a></li>
+            <li><a href="#faq" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#contact" class="mobile-nav-link block mt-1 px-3 py-2.5 rounded-xl text-sm font-semibold text-center text-white btn-primary" data-i18n="nav.enroll">Enroll Now</a></li>
           </ul>
         </div>
       </div>
@@ -181,36 +194,36 @@
           <div class="reveal">
             <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-white/10 text-cyan-200 border border-white/15 mb-6">
               <span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse" aria-hidden="true"></span>
-              Digital Marketing Learning Program
+              <span data-i18n="hero.badge">Digital Marketing Learning Program</span>
             </span>
             <h1 id="hero-heading" class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
-              Learn Digital Marketing Skills That
-              <span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Grow Your Career</span>
+              <span data-i18n="hero.title_line1">Learn Digital Marketing Skills That</span>
+              <span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent" data-i18n="hero.title_highlight">Grow Your Career</span>
             </h1>
-            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-xl leading-relaxed">
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-xl leading-relaxed" data-i18n="hero.subtitle">
               An in-person program to master real digital marketing, grow your personal profile, and build true wealth—with hands-on offline training and a supportive WhatsApp community.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row gap-4">
               <a href="#contact" class="btn-primary inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-white font-semibold text-base shadow-glow">
-                Enroll Now
+                <span data-i18n="hero.cta_enroll">Enroll Now</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
-              <a href="#services" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-white font-semibold text-base border border-white/25 bg-white/5 hover:bg-white/10 transition-colors">
+              <a href="#services" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-white font-semibold text-base border border-white/25 bg-white/5 hover:bg-white/10 transition-colors" data-i18n="hero.cta_curriculum">
                 View Curriculum
               </a>
             </div>
             <div class="mt-10 flex flex-wrap items-center gap-6 text-slate-300 text-sm">
               <div class="flex items-center gap-2">
                 <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                Beginner-friendly
+                <span data-i18n="hero.chip_beginner">Beginner-friendly</span>
               </div>
               <div class="flex items-center gap-2">
                 <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                Self-paced modules
+                <span data-i18n="hero.chip_selfpaced">Self-paced modules</span>
               </div>
               <div class="flex items-center gap-2">
                 <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                WhatsApp community
+                <span data-i18n="hero.chip_whatsapp">WhatsApp community</span>
               </div>
             </div>
           </div>
@@ -229,6 +242,7 @@
                   playsinline
                   webkit-playsinline
                   preload="auto"
+                  data-i18n-aria-label="hero.video_label"
                   aria-label="TeamzEffort digital marketing learning program short"
                 ></video>
                 <!-- Sound control: browsers block autoplay with audio; unmute on tap -->
@@ -237,6 +251,7 @@
                   id="hero-sound-btn"
                   class="absolute bottom-3 right-3 z-10 inline-flex items-center gap-2 rounded-full bg-black/70 hover:bg-black/85 text-white text-sm font-medium px-3.5 py-2 shadow-lg backdrop-blur-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
                   aria-pressed="false"
+                  data-i18n-aria-label="hero.sound_aria_off"
                   aria-label="Turn sound on"
                 >
                   <svg id="hero-sound-icon-off" class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -247,7 +262,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25H3.75A1.5 1.5 0 002.25 9.75v4.5a1.5 1.5 0 001.5 1.5h1.5L12 21V3L5.25 8.25z"/>
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 8.25a5.25 5.25 0 010 7.5M18.75 5.25a9 9 0 010 13.5"/>
                   </svg>
-                  <span id="hero-sound-label">Tap for sound</span>
+                  <span id="hero-sound-label" data-i18n="hero.sound_off">Tap for sound</span>
                 </button>
               </div>
             </div>
@@ -257,24 +272,24 @@
     </section>
 
     <!-- ========== TRUST BAR ========== -->
-    <section id="trust" class="py-10 md:py-12 bg-white border-y border-slate-100" aria-label="Program highlights">
+    <section id="trust" class="py-10 md:py-12 bg-white border-y border-slate-100" data-i18n-aria-label="trust.aria_label" aria-label="Program highlights">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
           <div class="reveal">
-            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary">Practical</p>
-            <p class="mt-1 text-sm text-body">Skills you can apply this week</p>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary" data-i18n="trust.practical_title">Practical</p>
+            <p class="mt-1 text-sm text-body" data-i18n="trust.practical_desc">Skills you can apply this week</p>
           </div>
           <div class="reveal reveal-delay-1">
-            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary">8+ modules</p>
-            <p class="mt-1 text-sm text-body">Marketing, brand &amp; web basics</p>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary" data-i18n="trust.modules_title">8+ modules</p>
+            <p class="mt-1 text-sm text-body" data-i18n="trust.modules_desc">Marketing, brand &amp; web basics</p>
           </div>
           <div class="reveal reveal-delay-2">
-            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary">Community</p>
-            <p class="mt-1 text-sm text-body">Live support on WhatsApp</p>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary" data-i18n="trust.community_title">Community</p>
+            <p class="mt-1 text-sm text-body" data-i18n="trust.community_desc">Live support on WhatsApp</p>
           </div>
           <div class="reveal reveal-delay-3">
-            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary">Flexible</p>
-            <p class="mt-1 text-sm text-body">About 3–5 hours per week</p>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-secondary" data-i18n="trust.flexible_title">Flexible</p>
+            <p class="mt-1 text-sm text-body" data-i18n="trust.flexible_desc">About 3–5 hours per week</p>
           </div>
         </div>
       </div>
@@ -285,15 +300,15 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div class="reveal">
-            <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3">About TeamzEffort</span>
-            <h2 id="about-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary leading-tight">
+            <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="about.eyebrow">About TeamzEffort</span>
+            <h2 id="about-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary leading-tight" data-i18n="about.heading">
               A learning platform built to grow you digitally
             </h2>
-            <p class="mt-5 text-body text-lg leading-relaxed">
+            <p class="mt-5 text-body text-lg leading-relaxed" data-i18n="about.body">
               We are a team of designers, developers, marketers, and strategists who teach practical digital skills so individuals can build their personal brand, attract opportunities, and grow online with confidence.
             </p>
             <blockquote class="mt-6 pl-4 border-l-4 border-accent">
-              <p class="font-display text-lg sm:text-xl font-semibold text-secondary italic">
+              <p class="font-display text-lg sm:text-xl font-semibold text-secondary italic" data-i18n="about.quote">
                 "Our team's smart work and unity are the real keys to our success."
               </p>
             </blockquote>
@@ -303,29 +318,29 @@
               <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <span class="text-2xl" aria-hidden="true">🎨</span>
               </div>
-              <h3 class="font-display font-semibold text-secondary text-lg">Creative Mentors</h3>
-              <p class="mt-2 text-sm text-body">Learn from designers and storytellers who help you build a brand that stands out.</p>
+              <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="about.card1_title">Creative Mentors</h3>
+              <p class="mt-2 text-sm text-body" data-i18n="about.card1_body">Learn from designers and storytellers who help you build a brand that stands out.</p>
             </div>
             <div class="bg-white rounded-2xl p-6 shadow-soft border border-slate-100">
               <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                 <span class="text-2xl" aria-hidden="true">📊</span>
               </div>
-              <h3 class="font-display font-semibold text-secondary text-lg">Data-Driven Skills</h3>
-              <p class="mt-2 text-sm text-body">Practice decisions backed by analytics — not guesswork.</p>
+              <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="about.card2_title">Data-Driven Skills</h3>
+              <p class="mt-2 text-sm text-body" data-i18n="about.card2_body">Practice decisions backed by analytics — not guesswork.</p>
             </div>
             <div class="bg-white rounded-2xl p-6 shadow-soft border border-slate-100">
               <div class="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center mb-4">
                 <span class="text-2xl" aria-hidden="true">⚡</span>
               </div>
-              <h3 class="font-display font-semibold text-secondary text-lg">Fast Progress</h3>
-              <p class="mt-2 text-sm text-body">Short, focused modules so you learn and ship projects quickly.</p>
+              <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="about.card3_title">Fast Progress</h3>
+              <p class="mt-2 text-sm text-body" data-i18n="about.card3_body">Short, focused modules so you learn and ship projects quickly.</p>
             </div>
             <div class="bg-white rounded-2xl p-6 shadow-soft border border-slate-100">
               <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <span class="text-2xl" aria-hidden="true">💬</span>
               </div>
-              <h3 class="font-display font-semibold text-secondary text-lg">Clear Guidance</h3>
-              <p class="mt-2 text-sm text-body">Honest feedback, shared goals, and community support.</p>
+              <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="about.card4_title">Clear Guidance</h3>
+              <p class="mt-2 text-sm text-body" data-i18n="about.card4_body">Honest feedback, shared goals, and community support.</p>
             </div>
           </div>
         </div>
@@ -336,11 +351,11 @@
     <section id="services" class="py-20 md:py-28 bg-white" aria-labelledby="services-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto reveal">
-          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3">Curriculum</span>
-          <h2 id="services-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary">
+          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="curriculum.eyebrow">Curriculum</span>
+          <h2 id="services-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary" data-i18n="curriculum.heading">
             What you will learn
           </h2>
-          <p class="mt-4 text-body text-lg">
+          <p class="mt-4 text-body text-lg" data-i18n="curriculum.intro">
             Full-stack digital skills for individuals — from strategy and creative to execution online.
           </p>
         </div>
@@ -348,62 +363,62 @@
         <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <article class="service-card reveal bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">📈</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Digital Marketing Foundations</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Build a growth mindset and multi-channel plans that attract the right audience.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: campaign basics you can run yourself</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m1_title">Digital Marketing Foundations</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m1_body">Build a growth mindset and multi-channel plans that attract the right audience.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m1_outcome">Outcome: campaign basics you can run yourself</p>
           </article>
           <article class="service-card reveal reveal-delay-1 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">📱</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Social Media &amp; Community</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Content calendars, engagement habits, and platform growth for personal brands.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: a consistent posting system</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m2_title">Social Media &amp; Community</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m2_body">Content calendars, engagement habits, and platform growth for personal brands.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m2_outcome">Outcome: a consistent posting system</p>
           </article>
           <article class="service-card reveal reveal-delay-2 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">🌐</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Website &amp; Landing Pages</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Ship fast, responsive pages with modern no-code tools that convert visitors.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: your own live landing page</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m3_title">Website &amp; Landing Pages</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m3_body">Ship fast, responsive pages with modern no-code tools that convert visitors.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m3_outcome">Outcome: your own live landing page</p>
           </article>
           <article class="service-card reveal reveal-delay-1 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">📢</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Paid Advertising Basics</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Learn Meta and Google ads fundamentals with ROI-focused practice.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: confidence to launch test ads</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m4_title">Paid Advertising Basics</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m4_body">Learn Meta and Google ads fundamentals with ROI-focused practice.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m4_outcome">Outcome: confidence to launch test ads</p>
           </article>
           <article class="service-card reveal reveal-delay-2 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">🔍</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">SEO Optimization</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Rank higher, get found, and grow organic traffic for your brand or projects.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: keyword + on-page checklist</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m5_title">SEO Optimization</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m5_body">Rank higher, get found, and grow organic traffic for your brand or projects.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m5_outcome">Outcome: keyword + on-page checklist</p>
           </article>
           <article class="service-card reveal reveal-delay-3 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">✍️</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Content Creation</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Copy, blogs, and creative assets tailored to the audience you want to reach.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: reusable content templates</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m6_title">Content Creation</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m6_body">Copy, blogs, and creative assets tailored to the audience you want to reach.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m6_outcome">Outcome: reusable content templates</p>
           </article>
           <article class="service-card reveal bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">🎯</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Personal Branding</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Position yourself clearly online — story, offer, and visual identity basics.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: a clear brand message</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m7_title">Personal Branding</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m7_body">Position yourself clearly online — story, offer, and visual identity basics.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m7_outcome">Outcome: a clear brand message</p>
           </article>
           <article class="service-card reveal reveal-delay-1 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">🖼️</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Graphic Design Basics</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Create scroll-stopping creatives for posts, stories, and simple campaigns.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: design-ready social assets</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m8_title">Graphic Design Basics</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m8_body">Create scroll-stopping creatives for posts, stories, and simple campaigns.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m8_outcome">Outcome: design-ready social assets</p>
           </article>
           <article class="service-card reveal reveal-delay-2 bg-surface rounded-2xl p-6 border border-slate-100 flex flex-col">
             <div class="text-3xl mb-4" aria-hidden="true">📸</div>
-            <h3 class="font-display font-semibold text-secondary text-lg">Photo &amp; Visual Storytelling</h3>
-            <p class="mt-2 text-sm text-body flex-grow">Shoot and select visuals that support your brand and content strategy.</p>
-            <p class="mt-4 text-xs font-semibold text-primary">Outcome: a simple visual content kit</p>
+            <h3 class="font-display font-semibold text-secondary text-lg" data-i18n="curriculum.m9_title">Photo &amp; Visual Storytelling</h3>
+            <p class="mt-2 text-sm text-body flex-grow" data-i18n="curriculum.m9_body">Shoot and select visuals that support your brand and content strategy.</p>
+            <p class="mt-4 text-xs font-semibold text-primary" data-i18n="curriculum.m9_outcome">Outcome: a simple visual content kit</p>
           </article>
         </div>
         <div class="mt-12 text-center reveal">
           <a href="#contact" class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-white font-semibold shadow-soft">
-            Enroll Now
+            <span data-i18n="curriculum.cta_enroll">Enroll Now</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
@@ -414,11 +429,11 @@
     <section id="process" class="py-20 md:py-28" aria-labelledby="process-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto reveal">
-          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3">How It Works</span>
-          <h2 id="process-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary">
+          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="process.eyebrow">How It Works</span>
+          <h2 id="process-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary" data-i18n="process.heading">
             A simple path. Real skills.
           </h2>
-          <p class="mt-4 text-body text-lg">
+          <p class="mt-4 text-body text-lg" data-i18n="process.intro">
             From first conversation to steady growth — clear steps, online-friendly, and collaborative.
           </p>
         </div>
@@ -428,29 +443,29 @@
             <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-white font-display font-bold text-xl flex items-center justify-center shadow-glow">
               01
             </div>
-            <h3 class="mt-5 font-display font-semibold text-secondary text-xl">Discovery Chat</h3>
-            <p class="mt-2 text-sm text-body max-w-xs mx-auto">We learn your goals, audience, and challenges in a quick online session or WhatsApp chat.</p>
+            <h3 class="mt-5 font-display font-semibold text-secondary text-xl" data-i18n="process.s1_title">Discovery Chat</h3>
+            <p class="mt-2 text-sm text-body max-w-xs mx-auto" data-i18n="process.s1_body">We learn your goals, audience, and challenges in a quick online session or WhatsApp chat.</p>
           </li>
           <li class="reveal reveal-delay-1 relative z-10 text-center">
             <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-white font-display font-bold text-xl flex items-center justify-center shadow-glow">
               02
             </div>
-            <h3 class="mt-5 font-display font-semibold text-secondary text-xl">Learning Plan</h3>
-            <p class="mt-2 text-sm text-body max-w-xs mx-auto">A tailored roadmap of modules, creative direction, and milestones that fit your pace.</p>
+            <h3 class="mt-5 font-display font-semibold text-secondary text-xl" data-i18n="process.s2_title">Learning Plan</h3>
+            <p class="mt-2 text-sm text-body max-w-xs mx-auto" data-i18n="process.s2_body">A tailored roadmap of modules, creative direction, and milestones that fit your pace.</p>
           </li>
           <li class="reveal reveal-delay-2 relative z-10 text-center">
             <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-white font-display font-bold text-xl flex items-center justify-center shadow-glow">
               03
             </div>
-            <h3 class="mt-5 font-display font-semibold text-secondary text-xl">Practice &amp; Build</h3>
-            <p class="mt-2 text-sm text-body max-w-xs mx-auto">You complete guided lessons and projects while mentors support you in the community.</p>
+            <h3 class="mt-5 font-display font-semibold text-secondary text-xl" data-i18n="process.s3_title">Practice &amp; Build</h3>
+            <p class="mt-2 text-sm text-body max-w-xs mx-auto" data-i18n="process.s3_body">You complete guided lessons and projects while mentors support you in the community.</p>
           </li>
           <li class="reveal reveal-delay-3 relative z-10 text-center">
             <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-white font-display font-bold text-xl flex items-center justify-center shadow-glow">
               04
             </div>
-            <h3 class="mt-5 font-display font-semibold text-secondary text-xl">Grow &amp; Share</h3>
-            <p class="mt-2 text-sm text-body max-w-xs mx-auto">Apply skills to your brand, track progress, and keep improving with peer feedback.</p>
+            <h3 class="mt-5 font-display font-semibold text-secondary text-xl" data-i18n="process.s4_title">Grow &amp; Share</h3>
+            <p class="mt-2 text-sm text-body max-w-xs mx-auto" data-i18n="process.s4_body">Apply skills to your brand, track progress, and keep improving with peer feedback.</p>
           </li>
         </ol>
       </div>
@@ -460,132 +475,132 @@
     <section id="testimonials" class="py-20 md:py-28 bg-white" aria-labelledby="testimonials-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto reveal">
-          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3">Learner Stories</span>
-          <h2 id="testimonials-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary">
+          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="stories.eyebrow">Learner Stories</span>
+          <h2 id="testimonials-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary" data-i18n="stories.heading">
             What learners say
           </h2>
-          <p class="mt-4 text-body text-lg">
+          <p class="mt-4 text-body text-lg" data-i18n="stories.intro">
             Feedback from people building digital skills with TeamzEffort.
           </p>
         </div>
 
         <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <article class="reveal bg-surface rounded-2xl p-7 border border-slate-100 shadow-soft flex flex-col">
-            <div class="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
+            <div class="flex gap-1 text-amber-400" data-i18n-aria-label="a11y.stars" aria-label="5 out of 5 stars">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <p class="mt-4 text-body leading-relaxed flex-grow">
+            <p class="mt-4 text-body leading-relaxed flex-grow" data-i18n="stories.t1_quote">
               "I started with almost no idea how digital marketing works. TeamzEffort broke it down step by step — from content planning to social media. Within a few weeks I was posting with a clear plan, not random content."
             </p>
             <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
               <div class="w-11 h-11 rounded-full bg-primary/15 flex items-center justify-center font-display font-bold text-primary" aria-hidden="true">DD</div>
               <div>
                 <p class="font-semibold text-secondary">Devendra Dalvi</p>
-                <p class="text-sm text-body">Learner · Social media basics</p>
+                <p class="text-sm text-body" data-i18n="stories.t1_role">Learner · Social media basics</p>
               </div>
             </div>
           </article>
 
           <article class="reveal reveal-delay-1 bg-surface rounded-2xl p-7 border border-slate-100 shadow-soft flex flex-col">
-            <div class="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
+            <div class="flex gap-1 text-amber-400" data-i18n-aria-label="a11y.stars" aria-label="5 out of 5 stars">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <p class="mt-4 text-body leading-relaxed flex-grow">
+            <p class="mt-4 text-body leading-relaxed flex-grow" data-i18n="stories.t2_quote">
               "The SEO and website modules were the most useful for me. I learned how people actually search online and how to structure a simple page so it can get found. Mentors explained everything in simple language."
             </p>
             <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
               <div class="w-11 h-11 rounded-full bg-accent/15 flex items-center justify-center font-display font-bold text-accent" aria-hidden="true">MK</div>
               <div>
                 <p class="font-semibold text-secondary">Manoj Kothavade</p>
-                <p class="text-sm text-body">Learner · SEO &amp; websites</p>
+                <p class="text-sm text-body" data-i18n="stories.t2_role">Learner · SEO &amp; websites</p>
               </div>
             </div>
           </article>
 
           <article class="reveal reveal-delay-2 bg-surface rounded-2xl p-7 border border-slate-100 shadow-soft flex flex-col">
-            <div class="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
+            <div class="flex gap-1 text-amber-400" data-i18n-aria-label="a11y.stars" aria-label="5 out of 5 stars">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <p class="mt-4 text-body leading-relaxed flex-grow">
+            <p class="mt-4 text-body leading-relaxed flex-grow" data-i18n="stories.t3_quote">
               "Paid ads always looked complicated until this program. After the ads module I understood targeting, budget basics, and how to test creatives. I launched my first small campaign with confidence."
             </p>
             <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
               <div class="w-11 h-11 rounded-full bg-success/15 flex items-center justify-center font-display font-bold text-success" aria-hidden="true">SR</div>
               <div>
                 <p class="font-semibold text-secondary">Sahil Rane</p>
-                <p class="text-sm text-body">Learner · Paid advertising</p>
+                <p class="text-sm text-body" data-i18n="stories.t3_role">Learner · Paid advertising</p>
               </div>
             </div>
           </article>
 
           <article class="reveal bg-surface rounded-2xl p-7 border border-slate-100 shadow-soft flex flex-col">
-            <div class="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
+            <div class="flex gap-1 text-amber-400" data-i18n-aria-label="a11y.stars" aria-label="5 out of 5 stars">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <p class="mt-4 text-body leading-relaxed flex-grow">
+            <p class="mt-4 text-body leading-relaxed flex-grow" data-i18n="stories.t4_quote">
               "What I liked most was the practical projects. I built a simple landing page, wrote my first set of captions, and got feedback from the community. It felt like real work, not only theory."
             </p>
             <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
               <div class="w-11 h-11 rounded-full bg-primary/15 flex items-center justify-center font-display font-bold text-primary" aria-hidden="true">SS</div>
               <div>
                 <p class="font-semibold text-secondary">Suyash Shinde</p>
-                <p class="text-sm text-body">Learner · Content &amp; landing pages</p>
+                <p class="text-sm text-body" data-i18n="stories.t4_role">Learner · Content &amp; landing pages</p>
               </div>
             </div>
           </article>
 
           <article class="reveal reveal-delay-1 bg-surface rounded-2xl p-7 border border-slate-100 shadow-soft flex flex-col">
-            <div class="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
+            <div class="flex gap-1 text-amber-400" data-i18n-aria-label="a11y.stars" aria-label="5 out of 5 stars">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <p class="mt-4 text-body leading-relaxed flex-grow">
+            <p class="mt-4 text-body leading-relaxed flex-grow" data-i18n="stories.t5_quote">
               "Personal branding and graphic design basics helped me show up online with more confidence. I finally know how to present myself, design simple creatives, and stay consistent with the WhatsApp community support."
             </p>
             <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
               <div class="w-11 h-11 rounded-full bg-accent/15 flex items-center justify-center font-display font-bold text-accent" aria-hidden="true">VS</div>
               <div>
                 <p class="font-semibold text-secondary">Vrushali Shinde</p>
-                <p class="text-sm text-body">Learner · Personal branding</p>
+                <p class="text-sm text-body" data-i18n="stories.t5_role">Learner · Personal branding</p>
               </div>
             </div>
           </article>
 
           <article class="reveal reveal-delay-2 bg-surface rounded-2xl p-7 border border-slate-100 shadow-soft flex flex-col">
-            <div class="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
+            <div class="flex gap-1 text-amber-400" data-i18n-aria-label="a11y.stars" aria-label="5 out of 5 stars">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             </div>
-            <p class="mt-4 text-body leading-relaxed flex-grow">
+            <p class="mt-4 text-body leading-relaxed flex-grow" data-i18n="stories.t6_quote">
               "As a busy learner, the flexible pace mattered a lot. Short modules, clear guidance, and the WhatsApp group kept me on track. I now understand content, branding, and how to grow my presence online without feeling lost."
             </p>
             <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
               <div class="w-11 h-11 rounded-full bg-success/15 flex items-center justify-center font-display font-bold text-success" aria-hidden="true">VK</div>
               <div>
                 <p class="font-semibold text-secondary">Veena Kerkar</p>
-                <p class="text-sm text-body">Learner · Flexible learning path</p>
+                <p class="text-sm text-body" data-i18n="stories.t6_role">Learner · Flexible learning path</p>
               </div>
             </div>
           </article>
@@ -593,7 +608,7 @@
 
         <div class="mt-12 text-center reveal">
           <a href="#contact" class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-white font-semibold shadow-soft">
-            Enroll Now
+            <span data-i18n="stories.cta_enroll">Enroll Now</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
@@ -604,11 +619,11 @@
     <section id="faq" class="py-20 md:py-28" aria-labelledby="faq-heading">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center reveal">
-          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3">FAQ</span>
-          <h2 id="faq-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary">
+          <span class="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="faq.eyebrow">FAQ</span>
+          <h2 id="faq-heading" class="font-display text-3xl sm:text-4xl font-bold text-secondary" data-i18n="faq.heading">
             Frequently asked questions
           </h2>
-          <p class="mt-4 text-body text-lg">
+          <p class="mt-4 text-body text-lg" data-i18n="faq.intro">
             Quick answers about our learning model, time commitment, and how enrollment works.
           </p>
         </div>
@@ -617,12 +632,12 @@
           <div class="faq-item reveal bg-white rounded-2xl border border-slate-100 shadow-soft overflow-hidden">
             <h3>
               <button type="button" id="faq-btn-1" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset" aria-expanded="false" aria-controls="faq-panel-1">
-                <span class="font-display font-semibold text-secondary">Do I need prior marketing experience to join?</span>
+                <span class="font-display font-semibold text-secondary" data-i18n="faq.q1">Do I need prior marketing experience to join?</span>
                 <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl font-light" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="faq-panel-1" class="faq-answer px-6" role="region" aria-labelledby="faq-btn-1" hidden>
-              <p class="pb-5 text-body text-sm leading-relaxed">
+              <p class="pb-5 text-body text-sm leading-relaxed" data-i18n-html="faq.a1">
                 <strong>Not at all.</strong> Our curriculum is built from the ground up. We start with digital marketing fundamentals and gradually move into personal branding, content strategy, and paid acquisition.
               </p>
             </div>
@@ -631,12 +646,12 @@
           <div class="faq-item reveal reveal-delay-1 bg-white rounded-2xl border border-slate-100 shadow-soft overflow-hidden">
             <h3>
               <button type="button" id="faq-btn-2" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset" aria-expanded="false" aria-controls="faq-panel-2">
-                <span class="font-display font-semibold text-secondary">How much time do I need to commit weekly?</span>
+                <span class="font-display font-semibold text-secondary" data-i18n="faq.q2">How much time do I need to commit weekly?</span>
                 <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl font-light" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="faq-panel-2" class="faq-answer px-6" role="region" aria-labelledby="faq-btn-2" hidden>
-              <p class="pb-5 text-body text-sm leading-relaxed">
+              <p class="pb-5 text-body text-sm leading-relaxed" data-i18n-html="faq.a2">
                 We recommend about <strong>3 to 5 hours per week</strong>. The program is self-paced and flexible for busy professionals, students, and side-hustlers.
               </p>
             </div>
@@ -645,12 +660,12 @@
           <div class="faq-item reveal reveal-delay-2 bg-white rounded-2xl border border-slate-100 shadow-soft overflow-hidden">
             <h3>
               <button type="button" id="faq-btn-3" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset" aria-expanded="false" aria-controls="faq-panel-3">
-                <span class="font-display font-semibold text-secondary">Will I learn how to build my own website?</span>
+                <span class="font-display font-semibold text-secondary" data-i18n="faq.q3">Will I learn how to build my own website?</span>
                 <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl font-light" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="faq-panel-3" class="faq-answer px-6" role="region" aria-labelledby="faq-btn-3" hidden>
-              <p class="pb-5 text-body text-sm leading-relaxed">
+              <p class="pb-5 text-body text-sm leading-relaxed" data-i18n-html="faq.a3">
                 <strong>Yes.</strong> You will learn how to build high-converting landing pages and basic websites using intuitive, modern no-code tools.
               </p>
             </div>
@@ -659,12 +674,12 @@
           <div class="faq-item reveal bg-white rounded-2xl border border-slate-100 shadow-soft overflow-hidden">
             <h3>
               <button type="button" id="faq-btn-4" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset" aria-expanded="false" aria-controls="faq-panel-4">
-                <span class="font-display font-semibold text-secondary">Can I focus on just one channel, like social media?</span>
+                <span class="font-display font-semibold text-secondary" data-i18n="faq.q4">Can I focus on just one channel, like social media?</span>
                 <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl font-light" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="faq-panel-4" class="faq-answer px-6" role="region" aria-labelledby="faq-btn-4" hidden>
-              <p class="pb-5 text-body text-sm leading-relaxed">
+              <p class="pb-5 text-body text-sm leading-relaxed" data-i18n-html="faq.a4">
                 Yes. Paths are modular. You can focus on <strong>social media, SEO, paid ads, branding, or content</strong> depending on your goals.
               </p>
             </div>
@@ -673,12 +688,12 @@
           <div class="faq-item reveal reveal-delay-1 bg-white rounded-2xl border border-slate-100 shadow-soft overflow-hidden">
             <h3>
               <button type="button" id="faq-btn-5" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset" aria-expanded="false" aria-controls="faq-panel-5">
-                <span class="font-display font-semibold text-secondary">What is the investment, and are there payment plans?</span>
+                <span class="font-display font-semibold text-secondary" data-i18n="faq.q5">What is the investment, and are there payment plans?</span>
                 <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xl font-light" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="faq-panel-5" class="faq-answer px-6" role="region" aria-labelledby="faq-btn-5" hidden>
-              <p class="pb-5 text-body text-sm leading-relaxed">
+              <p class="pb-5 text-body text-sm leading-relaxed" data-i18n-html="faq.a5">
                 We offer flexible monthly payment options and scholarship rates for eligible students. Join our WhatsApp community and message us to find a plan that works for you.
               </p>
             </div>
@@ -693,17 +708,17 @@
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div class="reveal">
-            <span class="inline-block text-cyan-300 font-semibold text-sm tracking-wide uppercase mb-3">Enroll</span>
-            <h2 id="contact-heading" class="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
+            <span class="inline-block text-cyan-300 font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="contact.eyebrow">Enroll</span>
+            <h2 id="contact-heading" class="font-display text-3xl sm:text-4xl font-bold text-white leading-tight" data-i18n="contact.heading">
               Ready to learn? Enroll now.
             </h2>
-            <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+            <p class="mt-4 text-slate-300 text-lg leading-relaxed" data-i18n="contact.body">
               Tell us about your goals. We will review your details and follow up via our WhatsApp community group and direct message.
             </p>
 
             <div class="mt-8 p-5 rounded-2xl bg-white/5 border border-white/10">
-              <p class="text-sm font-semibold text-white mb-2">Connect on WhatsApp</p>
-              <p class="text-sm text-slate-300 mb-4">
+              <p class="text-sm font-semibold text-white mb-2" data-i18n="contact.wa_title">Connect on WhatsApp</p>
+              <p class="text-sm text-slate-300 mb-4" data-i18n="contact.wa_body">
                 Join our community group for updates, support, and enrollment follow-up. This is our main channel — no separate sales chat button on this page.
               </p>
               <a
@@ -713,7 +728,7 @@
                 class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold text-base shadow-soft transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366] focus:ring-offset-slate-900"
               >
                 <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Join Our WhatsApp Community Group
+                <span data-i18n="contact.wa_cta">Join Our WhatsApp Community Group</span>
               </a>
             </div>
           </div>
@@ -722,58 +737,58 @@
             <form id="contact-form" class="glass rounded-3xl p-6 sm:p-8 shadow-soft" novalidate>
               <div class="grid sm:grid-cols-2 gap-4">
                 <div class="sm:col-span-1">
-                  <label for="name" class="block text-sm font-medium text-slate-200 mb-1.5">Name <span class="text-red-400">*</span></label>
-                  <input type="text" id="name" name="name" required autocomplete="name" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" placeholder="Your full name" />
-                  <p class="error-msg hidden mt-1 text-xs text-red-300" data-for="name">Please enter your name.</p>
+                  <label for="name" class="block text-sm font-medium text-slate-200 mb-1.5"><span data-i18n="form.name">Name</span> <span class="text-red-400">*</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" data-i18n-placeholder="form.name_ph" placeholder="Your full name" />
+                  <p class="error-msg hidden mt-1 text-xs text-red-300" data-for="name" data-i18n="form.err_name">Please enter your name.</p>
                 </div>
                 <div class="sm:col-span-1">
-                  <label for="phone" class="block text-sm font-medium text-slate-200 mb-1.5">Phone <span class="text-red-400">*</span></label>
-                  <input type="tel" id="phone" name="phone" required autocomplete="tel" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" placeholder="+91 98765 43210" />
-                  <p class="error-msg hidden mt-1 text-xs text-red-300" data-for="phone">Please enter a valid phone number.</p>
+                  <label for="phone" class="block text-sm font-medium text-slate-200 mb-1.5"><span data-i18n="form.phone">Phone</span> <span class="text-red-400">*</span></label>
+                  <input type="tel" id="phone" name="phone" required autocomplete="tel" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" data-i18n-placeholder="form.phone_ph" placeholder="+91 98765 43210" />
+                  <p class="error-msg hidden mt-1 text-xs text-red-300" data-for="phone" data-i18n="form.err_phone">Please enter a valid phone number.</p>
                 </div>
                 <div class="sm:col-span-1">
-                  <label for="email" class="block text-sm font-medium text-slate-200 mb-1.5">Email <span class="text-red-400">*</span></label>
-                  <input type="email" id="email" name="email" required autocomplete="email" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" placeholder="you@email.com" />
-                  <p class="error-msg hidden mt-1 text-xs text-red-300" data-for="email">Please enter a valid email.</p>
+                  <label for="email" class="block text-sm font-medium text-slate-200 mb-1.5"><span data-i18n="form.email">Email</span> <span class="text-red-400">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" data-i18n-placeholder="form.email_ph" placeholder="you@email.com" />
+                  <p class="error-msg hidden mt-1 text-xs text-red-300" data-for="email" data-i18n="form.err_email">Please enter a valid email.</p>
                 </div>
                 <div class="sm:col-span-1">
-                  <label for="city" class="block text-sm font-medium text-slate-200 mb-1.5">City</label>
-                  <input type="text" id="city" name="city" autocomplete="address-level2" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" placeholder="e.g. Mumbai, Dubai, London" />
+                  <label for="city" class="block text-sm font-medium text-slate-200 mb-1.5" data-i18n="form.city">City</label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder-slate-400 text-sm" data-i18n-placeholder="form.city_ph" placeholder="e.g. Mumbai, Dubai, London" />
                 </div>
                 <div class="sm:col-span-1">
-                  <label for="country" class="block text-sm font-medium text-slate-200 mb-1.5">Country</label>
+                  <label for="country" class="block text-sm font-medium text-slate-200 mb-1.5" data-i18n="form.country">Country</label>
                   <select id="country" name="country" autocomplete="country-name" class="form-input w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-white text-sm">
-                    <option value="India" selected>India</option>
-                    <option value="United Arab Emirates">United Arab Emirates</option>
-                    <option value="United States">United States</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Singapore">Singapore</option>
-                    <option value="Saudi Arabia">Saudi Arabia</option>
-                    <option value="Qatar">Qatar</option>
-                    <option value="Germany">Germany</option>
-                    <option value="Nepal">Nepal</option>
-                    <option value="Bangladesh">Bangladesh</option>
-                    <option value="Sri Lanka">Sri Lanka</option>
-                    <option value="Malaysia">Malaysia</option>
-                    <option value="Other">Other</option>
+                    <option value="India" selected data-i18n="form.country_india">India</option>
+                    <option value="United Arab Emirates" data-i18n="form.country_uae">United Arab Emirates</option>
+                    <option value="United States" data-i18n="form.country_us">United States</option>
+                    <option value="United Kingdom" data-i18n="form.country_uk">United Kingdom</option>
+                    <option value="Canada" data-i18n="form.country_canada">Canada</option>
+                    <option value="Australia" data-i18n="form.country_australia">Australia</option>
+                    <option value="Singapore" data-i18n="form.country_singapore">Singapore</option>
+                    <option value="Saudi Arabia" data-i18n="form.country_saudi">Saudi Arabia</option>
+                    <option value="Qatar" data-i18n="form.country_qatar">Qatar</option>
+                    <option value="Germany" data-i18n="form.country_germany">Germany</option>
+                    <option value="Nepal" data-i18n="form.country_nepal">Nepal</option>
+                    <option value="Bangladesh" data-i18n="form.country_bangladesh">Bangladesh</option>
+                    <option value="Sri Lanka" data-i18n="form.country_srilanka">Sri Lanka</option>
+                    <option value="Malaysia" data-i18n="form.country_malaysia">Malaysia</option>
+                    <option value="Other" data-i18n="form.country_other">Other</option>
                   </select>
                 </div>
               </div>
 
               <button type="submit" id="form-submit" class="btn-primary mt-6 w-full inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-white font-semibold text-base disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none">
-                <span id="form-submit-label">Enroll Now</span>
+                <span id="form-submit-label" data-i18n="form.submit">Enroll Now</span>
                 <svg id="form-submit-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </button>
 
-              <p id="form-success" class="hidden mt-4 text-center text-sm text-success font-medium" role="status" aria-live="polite">
+              <p id="form-success" class="hidden mt-4 text-center text-sm text-success font-medium" role="status" aria-live="polite" data-i18n="form.success">
                 Thank you! We received your enrollment request. We will contact you via our WhatsApp community group and DM — usually within 24–48 hours. Please join the group if you have not already.
               </p>
-              <p id="form-error" class="hidden mt-4 text-center text-sm text-red-300 font-medium" role="alert" aria-live="assertive">
+              <p id="form-error" class="hidden mt-4 text-center text-sm text-red-300 font-medium" role="alert" aria-live="assertive" data-i18n="form.error">
                 Something went wrong while submitting. Please try again or join our WhatsApp group to enroll.
               </p>
-              <p class="mt-4 text-center text-xs text-slate-400">
+              <p class="mt-4 text-center text-xs text-slate-400" data-i18n="form.consent">
                 By submitting, you agree to be contacted about the program via WhatsApp and email. No spam — ever.
               </p>
             </form>
@@ -792,22 +807,33 @@
           <span>TeamzEffort</span>
         </div>
         <p class="text-slate-400">
-          &copy; <span id="year"></span> TeamzEffort. Digital marketing learning program.
+          &copy; <span id="year"></span> <span data-i18n="footer.tagline">TeamzEffort. Digital marketing learning program.</span>
         </p>
-        <nav class="flex flex-wrap gap-4" aria-label="Footer">
-          <a href="#contact" class="hover:text-white transition-colors">Enroll</a>
-          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-          <a href="https://chat.whatsapp.com/Cbv34JFz9MlEE1Q2lgpJlf" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp Group</a>
-          <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
-          <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+        <nav class="flex flex-wrap gap-4" data-i18n-aria-label="a11y.footer_nav" aria-label="Footer">
+          <a href="#contact" class="hover:text-white transition-colors" data-i18n="footer.enroll">Enroll</a>
+          <a href="#faq" class="hover:text-white transition-colors" data-i18n="footer.faq">FAQ</a>
+          <a href="https://chat.whatsapp.com/Cbv34JFz9MlEE1Q2lgpJlf" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" data-i18n="footer.whatsapp">WhatsApp Group</a>
+          <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="footer.privacy">Privacy</a>
+          <a href="terms.html" class="hover:text-white transition-colors" data-i18n="footer.terms">Terms</a>
         </nav>
       </div>
     </div>
   </footer>
 
+  <!-- i18n catalogs (from i18n/*.yaml via npm run build:i18n) -->
+  <script src="static/js/i18n-data.js"></script>
+  <script src="static/js/i18n.js"></script>
   <script>
     (function () {
       'use strict';
+
+      function tr(key, fallback) {
+        if (window.TZi18n && typeof window.TZi18n.t === 'function') {
+          var v = window.TZi18n.t(key);
+          if (v && v !== key) return v;
+        }
+        return fallback;
+      }
 
       // Year
       var yearEl = document.getElementById('year');
@@ -836,10 +862,15 @@
           var on = !heroVideo.muted && soundOn;
           if (heroSoundBtn) {
             heroSoundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-            heroSoundBtn.setAttribute('aria-label', on ? 'Mute sound' : 'Turn sound on');
+            heroSoundBtn.setAttribute(
+              'aria-label',
+              on ? tr('hero.sound_aria_on', 'Mute sound') : tr('hero.sound_aria_off', 'Turn sound on')
+            );
           }
           if (heroSoundLabel) {
-            heroSoundLabel.textContent = on ? 'Sound on' : 'Tap for sound';
+            heroSoundLabel.textContent = on
+              ? tr('hero.sound_on', 'Sound on')
+              : tr('hero.sound_off', 'Tap for sound');
           }
           if (heroIconOff) heroIconOff.classList.toggle('hidden', on);
           if (heroIconOn) heroIconOn.classList.toggle('hidden', !on);
@@ -847,6 +878,12 @@
             heroSoundBtn.classList.toggle('bg-primary/90', on);
             heroSoundBtn.classList.toggle('bg-black/70', !on);
           }
+        }
+
+        if (window.TZi18n && typeof window.TZi18n.onChange === 'function') {
+          window.TZi18n.onChange(function () {
+            updateSoundUI();
+          });
         }
 
         function enableSound() {
@@ -1112,8 +1149,20 @@
 
         function setSubmitting(isSubmitting) {
           if (submitBtn) submitBtn.disabled = isSubmitting;
-          if (submitLabel) submitLabel.textContent = isSubmitting ? 'Submitting…' : 'Enroll Now';
+          if (submitLabel) {
+            submitLabel.textContent = isSubmitting
+              ? tr('form.submitting', 'Submitting…')
+              : tr('form.submit', 'Enroll Now');
+          }
           if (submitIcon) submitIcon.classList.toggle('hidden', isSubmitting);
+        }
+
+        if (window.TZi18n && typeof window.TZi18n.onChange === 'function') {
+          window.TZi18n.onChange(function () {
+            if (submitBtn && !submitBtn.disabled && submitLabel) {
+              submitLabel.textContent = tr('form.submit', 'Enroll Now');
+            }
+          });
         }
 
         form.addEventListener('submit', function (e) {

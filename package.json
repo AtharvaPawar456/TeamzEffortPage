@@ -5,7 +5,9 @@
   "description": "TeamzEffort digital marketing learning program landing page",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./static/css/styles.css --minify",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./static/css/styles.css --watch"
+    "watch:css": "tailwindcss -i ./src/input.css -o ./static/css/styles.css --watch",
+    "build:i18n": "node scripts/build-i18n.js",
+    "build": "npm run build:i18n && npm run build:css"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

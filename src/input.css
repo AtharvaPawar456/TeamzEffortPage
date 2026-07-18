@@ -9,13 +9,22 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', 'Noto Sans Devanagari', system-ui, sans-serif;
   color: #334155;
   background: #f8fafc;
 }
 
 .font-display {
-  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-family: 'Poppins', 'Noto Sans Devanagari', 'Inter', system-ui, sans-serif;
+}
+
+/* Prefer Devanagari-capable stack when MR / HI is active */
+html.lang-deva body {
+  font-family: 'Noto Sans Devanagari', 'Inter', system-ui, sans-serif;
+}
+
+html.lang-deva .font-display {
+  font-family: 'Noto Sans Devanagari', 'Poppins', system-ui, sans-serif;
 }
 
 /* Hero pattern */
@@ -124,8 +133,83 @@ html.js .reveal.visible {
 }
 
 #mobile-menu.open {
-  max-height: 28rem;
+  max-height: 34rem;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.4);
+}
+
+/* Language switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lang-btn {
+  min-width: 2.25rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.lang-btn.is-active,
+.lang-btn[aria-pressed='true'] {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+#navbar.scrolled .lang-switcher {
+  background: rgba(15, 23, 42, 0.06);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+#navbar.scrolled .lang-btn {
+  color: #334155;
+}
+
+#navbar.scrolled .lang-btn:hover {
+  background: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+}
+
+#navbar.scrolled .lang-btn.is-active,
+#navbar.scrolled .lang-btn[aria-pressed='true'] {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+#navbar.menu-open .lang-switcher,
+#navbar.menu-open.scrolled .lang-switcher {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+#navbar.menu-open .lang-btn,
+#navbar.menu-open.scrolled .lang-btn {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#navbar.menu-open .lang-btn.is-active,
+#navbar.menu-open .lang-btn[aria-pressed='true'],
+#navbar.menu-open.scrolled .lang-btn.is-active,
+#navbar.menu-open.scrolled .lang-btn[aria-pressed='true'] {
+  background: #ffffff;
+  color: #0f172a;
 }
 
 #mobile-menu .mobile-nav-link {

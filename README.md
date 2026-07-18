@@ -15,9 +15,24 @@ Modern landing page for **TeamzEffort**, a **digital marketing learning program*
 - `index.html` + small static pages (`privacy.html`, `terms.html`)
 - [Tailwind CSS](https://tailwindcss.com) **built** to `static/css/styles.css` (not CDN)
 - Vanilla HTML, CSS, and JavaScript
-- Google Fonts: **Poppins** + **Inter**
+- Google Fonts: **Poppins** + **Inter** + **Noto Sans Devanagari** (Marathi / Hindi)
+- Client-side i18n: English (default), Marathi, Hindi — YAML source in `i18n/`
 - JSON-LD (Organization, Course, FAQPage)
 - Semantic markup (ARIA FAQ, skip link)
+
+## Languages (i18n)
+
+| Code | Language | Default |
+|------|----------|---------|
+| `en` | English | Yes |
+| `mr` | Marathi (मराठी) | |
+| `hi` | Hindi (हिन्दी) | |
+
+- Edit copy in `i18n/en.yaml`, `i18n/mr.yaml`, `i18n/hi.yaml`
+- Run `npm run build:i18n` to regenerate `static/i18n/*.json` and `static/js/i18n-data.js`
+- Navbar language switcher persists choice in `localStorage` (`tz-lang`)
+- Optional URL: `?lang=mr` or `?lang=hi`
+- English remains in HTML as progressive default if JS fails
 
 ## Sections
 
@@ -36,17 +51,19 @@ Modern landing page for **TeamzEffort**, a **digital marketing learning program*
 
 ```bash
 npm install
-npm run build:css
+npm run build
 npx serve .
 ```
 
-Or open `index.html` after building CSS.
+Or open `index.html` after building CSS and i18n.
 
-### CSS build
+### Build scripts
 
 ```bash
-npm run build:css   # production minify
-npm run watch:css   # while editing classes
+npm run build:css    # Tailwind → static/css/styles.css
+npm run build:i18n   # i18n/*.yaml → static/i18n/*.json + static/js/i18n-data.js
+npm run build        # i18n + CSS
+npm run watch:css    # while editing classes
 ```
 
 Source: `src/input.css` → output: `static/css/styles.css`.
